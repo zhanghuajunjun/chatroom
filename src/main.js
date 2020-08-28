@@ -3,7 +3,11 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+import VueSocketIO from 'vue-socket.io'
 
+Vue.use(new VueSocketIO({
+    connection: 'http://localhost:5005',
+}))
 Vue.config.productionTip = false
 
 new Vue({
